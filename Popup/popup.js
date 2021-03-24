@@ -60,3 +60,38 @@ document.getElementById("source").onchange=()=>{
 		document.getElementById("content-source-plex").className="hidden"
 	}
 }
+document.getElementById("type").onchange=()=>{
+	let type=document.getElementById("type").value
+	if(type==1)
+	{
+		document.getElementById("streamurl").style.display="block"
+		document.getElementById("streamnote").style.display="list-item"
+	}
+	else
+	{
+		document.getElementById("streamurl").style.display="none"
+		document.getElementById("streamnote").style.display="none"
+	}
+	if(type>1)
+	{
+		document.getElementById("state").className=""
+		document.getElementById("party").style.display="none"
+	}
+	else
+	{
+		document.getElementById("state").className="withparty"
+		document.getElementById("party").style.display="inline-block"
+	}
+	if(type==4)
+	{
+		document.getElementById("type").style.width="399px"
+		document.getElementById("name").style.display="none"
+		document.getElementById("details").style.display="none"
+	}
+	else
+	{
+		document.getElementById("type").style.width=""
+		document.getElementById("name").style.display="inline-block"
+		document.getElementById("details").style.display="inline-block"
+	}
+}
