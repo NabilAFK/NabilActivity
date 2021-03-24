@@ -15,3 +15,4 @@ for(let i in elms)
 	{
 		elm.setAttribute("placeholder",chrome.i18n.getMessage(elm.getAttribute("data-placeholder")))
 	}
+}
