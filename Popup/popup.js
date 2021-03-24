@@ -132,3 +132,74 @@ chrome.storage.local.get(["source","type","name","streamurl","details","state","
 		document.getElementById("partymax").value=result.partymax
 	}
 })
+document.getElementById("streamurl").onchange=()=>{
+	document.getElementById("streamurl").value=document.getElementById("streamurl").value.replace("www.twitch.tv","twitch.tv")
+}
+document.getElementById("updatebtn").onclick=()=>{
+	document.getElementById("updatebtn").setAttribute("disabled","disabled")
+	let source=document.getElementById("source").value
+	chrome.runtime.sendMessage({
+		action:"source",
+		source:source
+	},()=>{
+		if(source=="custom")
+		{
+			chrome.runtime.sendMessage({
+				type:document.getElementById("type").value,
+				name:document.getElementById("name").value,
+				streamurl:document.getElementById("streamurl").value,
+				details:document.getElementById("details").value,
+				state:document.getElementById("state").value,
+				partycur:document.getElementById("partycur").value,
+				partymax:document.getElementById("partymax").value
+			},()=>document.getElementById("updatebtn").removeAttribute("disabled"))
+		}
+		else
+		{
+			document.getElementById("updatebtn").removeAttribute("disabled")
+		}
+	})
+}
+chrome.runtime.sendMessage({action:"ports"},response=>{
+	if(response.discord)
+	{
+		document.getElementById("content-ok").className=""
+	}
+	else
+	{
+		document.getElementById("content-notab").className=""
+	}
+	if(response.youtube)
+	{
+		document.getElementById("content-source-youtube-ok").className=""
+	}
+	else
+	{
+		document.getElementById("content-source-youtube-notab").className=""
+	}
+	if(response.youtubemusic)
+	{		
+		document.getElementById("content-source-youtube-music-ok").className=""
+	}
+	else
+	{
+		document.getElementById("content-source-youtube-music-notab").className=""
+	}
+	if(response.soundcloud)
+	{
+		document.getElementById("content-source-soundcloud-ok").className=""
+	}
+	else
+	{
+		document.getElementById("content-source-soundcloud-notab").className=""
+	}
+	if(response.plex)
+	{
+		document.getElementById("content-source-plex-ok").className=""
+	}
+	else
+	{
+		document.getElementById("content-source-plex-notab").className=""
+	}
+	document.getElementById("content-loading").className="hidden"
+})
