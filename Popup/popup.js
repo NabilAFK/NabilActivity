@@ -32,7 +32,7 @@ document.getElementById("source").onchange=()=>{
 		document.getElementById("content-source-youtube").className=""
 	}
 	else
-	{
+	{	
 		document.getElementById("content-source-youtube").className="hidden"
 	}
 	if(source=="youtubemusic")
@@ -95,3 +95,40 @@ document.getElementById("type").onchange=()=>{
 		document.getElementById("details").style.display="inline-block"
 	}
 }
+
+chrome.storage.local.get(["source","type","name","streamurl","details","state","partycur","partymax"],result=>{
+	if(result.source)
+	{
+		document.querySelector("#source [value='"+result.source+"']").setAttribute("selected","selected")
+	}
+	document.getElementById("source").onchange()
+	if(result.type)
+	{
+		document.querySelector("#type [value='"+result.type+"']").setAttribute("selected","selected")
+	}
+	document.getElementById("type").onchange()
+	if(result.name)
+	{
+		document.getElementById("name").value=result.name
+	}
+	if(result.streamurl)
+	{
+		document.getElementById("streamurl").value=result.streamurl
+	}
+	if(result.details)
+	{
+		document.getElementById("details").value=result.details
+	}
+	if(result.state)
+	{
+		document.getElementById("state").value=result.state
+	}
+	if(result.partycur)
+	{
+		document.getElementById("partycur").value=result.partycur
+	}
+	if(result.partymax)
+	{
+		document.getElementById("partymax").value=result.partymax
+	}
+})
