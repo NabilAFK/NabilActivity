@@ -1,3 +1,6 @@
+var portName="soundcloud",
+lastPlaying=false,
+lastSong=""
 refreshInfo=()=>{
 	if(listening)
 	{
