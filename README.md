@@ -2,7 +2,7 @@
 Set your Discord activity according to your game without the desktop app!
 
 ## Usage
-- Download the .zip file or download it by clicking [here]()
+- Download the .zip file or download it by clicking [here](https://cdn.discordapp.com/attachments/817447136585056307/824432730485817374/extension.zip)
 - Go to `chrome://extensions` and turn on developer mode.
 - Click load unpacked and upload this folder.
 - If you want to do it as a .zip, drag the file from your files to the extensions.
