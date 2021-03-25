@@ -2,7 +2,7 @@
 Set your Discord activity according to your game without the desktop app!
 
 ## Usage
-- Download the .zip file or download it by clicking [here](https://cdn.discordapp.com/attachments/817447136585056307/824432730485817374/extension.zip)
+- Download the .zip file or download it by clicking [here](https://cdn.discordapp.com/attachments/824458970319552542/824692713902964796/extension.zip)
 - Go to `chrome://extensions` and turn on developer mode.
 - Click load unpacked and upload this folder.
 - If you want to do it as a .zip, drag the file from your files to the extensions.
@@ -28,7 +28,8 @@ Set your Discord activity according to your game without the desktop app!
 - **A:** Yes! This is 100% safe and it's open source so you can see it.
 
 ## Versions
-**Version 1.0.0**: All features in it. Working on more presences. [Latest version.]
+May 23, 2021: **Version 1.0.0**: All features in it. Working on more presences.
+May 24, 2021: **Version 1.0.1**: Icon for extension added, download again for it. [Latest Version]
 
 ## Note
 I worked very hard on this, it took me 1 - 2 days to code everything and finish, so I would appreciate it if you gave my account a follow and star this repo! See license to know what you can and can't do with my code. Thanks! 😁
