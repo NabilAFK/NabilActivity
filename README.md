@@ -14,6 +14,12 @@ Set your Discord activity according to your game without the desktop app!
 - Go to `chrome://extensions` > Turn developer mode on > Load unpacked
 - Load the `NABIL_ACTIVITY` file there and you can change your activity.
 
+## Versions
+- May 23, 2021: **Version 1.0.0**
+  - All features in it. Working on more presences. 
+- May 24, 2021: **Version 1.0.1** [Latest Version]
+  - Icon for extension added, download again for it. [Latest Version]
+
 ## FAQ
 - **Q:** Why isn't it installing?
 - **A:** Make sure to unzip the file after downloading.
@@ -26,10 +32,6 @@ Set your Discord activity according to your game without the desktop app!
 -----------
 - **Q:** This source code looks sketchy, is it safe?
 - **A:** Yes! This is 100% safe and it's open source so you can see it.
-
-## Versions
-May 23, 2021: **Version 1.0.0**: All features in it. Working on more presences.
-May 24, 2021: **Version 1.0.1**: Icon for extension added, download again for it. [Latest Version]
 
 ## Note
 I worked very hard on this, it took me 1 - 2 days to code everything and finish, so I would appreciate it if you gave my account a follow and star this repo! See license to know what you can and can't do with my code. Thanks! 😁
